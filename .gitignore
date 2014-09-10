@@ -1,5 +1,19 @@
-*.log
+## General
+.cvs
 .htaccess
+.svn
+*.bak
+*.log
+*.swp
+
+## Windows
+Desktop.ini
+Thumbs.db
+
+## Mac
+.DS_Store
+
+##WordPress
 sitemap.xml
 sitemap.xml.gz
 wp-config.php
