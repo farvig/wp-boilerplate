@@ -1,0 +1,514 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: IVP\n"
+"POT-Creation-Date: 2014-06-04 17:34+0100\n"
+"PO-Revision-Date: 2014-06-04 17:34+0100\n"
+"Last-Translator: \n"
+"Language-Team: ivp <info@ivaerksaetterpress.dk>\n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.5\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:17
+msgid "Apologies, this page has gone missing. Please try and search."
+msgstr "Undskyld, men siden er forsvundet. Prøv eventuelt at søg."
+
+#: ../archive.php:6 ../category.php:5
+#, php-format
+msgid "Category Archives: %s"
+msgstr "Kategoriarkiv: %s"
+
+#: ../archive.php:20 ../author.php:53 ../category.php:19 ../search.php:14
+#: ../tag.php:14
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> tidligere indæg"
+
+#: ../archive.php:21 ../author.php:54 ../category.php:20 ../search.php:15
+#: ../tag.php:15
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Nyere indlæg <span class=\"meta-nav\">&rarr;</span>"
+
+#: ../archive.php:28 ../author.php:61 ../category.php:27 ../index.php:17
+#: ../search.php:22 ../tag.php:22
+msgid "Not Found"
+msgstr "Ikke fundet"
+
+#: ../archive.php:30 ../author.php:63 ../category.php:29 ../index.php:19
+#: ../search.php:24 ../tag.php:24
+msgid ""
+"Apologies, but no results were found for the requested archive. Perhaps "
+"searching will help find a related post."
+msgstr "Undskyld, men vi fandt ingen indlæg i arkivet. Prøv eventuelt at søge."
+
+#: ../archive.php:53 ../author.php:86 ../category.php:52 ../index.php:35
+#: ../search.php:47 ../tag.php:47
+#, php-format
+msgid "Posted in %2$s"
+msgstr "Skrevet i %2$s"
+
+#: ../archive.php:60 ../author.php:93 ../category.php:59 ../index.php:42
+#: ../search.php:54 ../tag.php:54
+#, php-format
+msgid "Tagged %2$s"
+msgstr "tagged %2$s"
+
+#: ../archive.php:76 ../author.php:107 ../category.php:75 ../index.php:59
+#: ../search.php:70 ../tag.php:70
+msgid "&larr; Older posts"
+msgstr "&larr; tidligere indlæg"
+
+#: ../archive.php:77 ../author.php:108 ../category.php:76 ../index.php:62
+#: ../search.php:71 ../tag.php:71
+msgid "Newer posts &rarr;"
+msgstr "Nyere indlæg &rarr;"
+
+#: ../author.php:23
+#, php-format
+msgid "Author Archives: %s"
+msgstr "Forfatterarkiv: %s"
+
+#: ../author.php:31
+#, php-format
+msgid "About %s"
+msgstr "Om %s"
+
+#: ../author.php:96
+msgid "Leave a comment"
+msgstr "Skriv en kommentar"
+
+#: ../author.php:96
+msgid "1 Comment"
+msgstr "1 kommentar"
+
+#: ../author.php:96
+msgid "% Comments"
+msgstr "% kommentarer"
+
+#: ../comments.php:17
+msgid ""
+"This post is password protected. Enter the password to view any comments."
+msgstr "Dette indlæg er password-beskyttet"
+
+#: ../comments.php:39 ../comments.php:56
+msgid "&larr; Older Comments"
+msgstr "&larr; tidligere indlæg"
+
+#: ../comments.php:40 ../comments.php:57
+msgid "Newer Comments &rarr;"
+msgstr "Nyere indlæg &rarr;"
+
+#: ../comments.php:67
+msgid "Comments are closed."
+msgstr "Der er lukket for kommentarer"
+
+#: ../functions.php:98
+msgid "Your comment is awaiting moderation."
+msgstr "Din kommentar afventer godkendelse"
+
+#: ../functions.php:103
+#, php-format
+msgid "%s"
+msgstr "%s"
+
+#: ../functions.php:113
+#, php-format
+msgid "%1$s %2$s"
+msgstr "%1$s %2$s"
+
+#: ../functions.php:127
+msgid "Pingback:"
+msgstr "Pingback:"
+
+#: ../functions.php:127
+msgid "(Edit)"
+msgstr "(rediger)"
+
+#: ../functions.php:170
+#, php-format
+msgid "Search results for %s"
+msgstr "Søgeresultater for %s"
+
+#: ../functions.php:173 ../functions.php:190
+#, php-format
+msgid "Page %s"
+msgstr "Side  %s"
+
+#: ../functions.php:211
+msgid "Primary Widget Area"
+msgstr "Primært widget område"
+
+#: ../functions.php:213
+msgid "Blog post sidebar widget"
+msgstr "Blog indlæg sidebar widget"
+
+#: ../functions.php:222
+msgid "First Footer Widget Area"
+msgstr "Første footer Widget område"
+
+#: ../functions.php:224
+msgid "The first footer widget area"
+msgstr "Det første footer Widget område"
+
+#: ../functions.php:233
+msgid "Second Footer Widget Area"
+msgstr "Andet footer Widget område"
+
+#: ../functions.php:235
+msgid "The second footer widget area"
+msgstr "Det andet footer Widget område"
+
+#: ../functions.php:244
+msgid "Third Footer Widget Area"
+msgstr "Tredje footer Widget område"
+
+#: ../functions.php:246
+msgid "The third footer widget area"
+msgstr "Det tredje footer Widget område"
+
+#: ../functions.php:255
+msgid "Fourth Footer Widget Area"
+msgstr "Fjerde footer Widget område"
+
+#: ../functions.php:257
+msgid "The fourth footer widget area"
+msgstr "The fjerde footer Widget område"
+
+#: ../functions.php:297
+#, php-format
+msgid ""
+"<span class=\"%1$s\">Posted on</span> <span class=\"entry-date\">%2$s %3$s, "
+"%4$s</span> <span class=\"meta-sep\">by</span> %5$s"
+msgstr ""
+"<span class=\"%1$s\">Skrevet </span> <span class=\"entry-date\">%2$s %3$s, "
+"%4$s</span> <span class=\"meta-sep\">af</span> %5$s"
+
+#: ../functions.php:338
+#, php-format
+msgid "This entry was posted in %1$s and tagged %2$s."
+msgstr "Dette indlæg er i %1$s og er tagget %2$s."
+
+#: ../functions.php:340
+#, php-format
+msgid "This entry was posted in %1$s."
+msgstr "Dette indlæg er i %1$s."
+
+#: ../functions.php:395
+msgid "Site navigation"
+msgstr "Side menu"
+
+#: ../functions.php:396
+msgid "Secondary menu for widgets"
+msgstr "Menu til widgets"
+
+#: ../functions.php:598
+msgid "Agree to Our Terms of Use"
+msgstr "Accepter vores betingelser"
+
+#: ../functions.php:607
+msgid "You must agree to our terms of use"
+msgstr ""
+
+#: ../header.php:55
+msgid "Skip to content"
+msgstr "Hop til indhold"
+
+#: ../inc/admin/admin-pages.php:15 ../inc/admin/admin-pages.php:16
+msgid "Theme settings"
+msgstr "Tema Indstillinger"
+
+#: ../inc/admin/admin-pages.php:70 ../inc/admin/admin-pages.php:71
+#: ../inc/admin/admin-pages.php:82
+msgid "Theme help"
+msgstr "Tema hjælp"
+
+#: ../inc/admin/admin-pages.php:84
+msgid "Finding Documentation and About this Help Page"
+msgstr "Find dokumentation og om denne hjælpeside"
+
+#: ../inc/admin/theme-settings.php:88
+msgid "Facebook page"
+msgstr "Facebook side"
+
+#: ../inc/admin/theme-settings.php:89
+msgid "Link to your facebook page"
+msgstr "Link til din Facebook side"
+
+#: ../inc/admin/theme-settings.php:94
+msgid "Twitter page"
+msgstr "Twitter side"
+
+#: ../inc/admin/theme-settings.php:95
+msgid "Link to your Twitter page"
+msgstr "Link til din Twitter side"
+
+#: ../inc/admin/theme-settings.php:100
+msgid "Youtube page"
+msgstr "YouTube side"
+
+#: ../inc/admin/theme-settings.php:101
+msgid "Link to your Youtube page"
+msgstr "Link til din YouTube side"
+
+#: ../inc/admin/theme-settings.php:106
+msgid "Pinterest page"
+msgstr "Pinterest side"
+
+#: ../inc/admin/theme-settings.php:107
+msgid "Link to your Pinterest page"
+msgstr "Link til din Pinterest side"
+
+#: ../inc/admin/theme-settings.php:112
+msgid "LinkedIn page"
+msgstr "Linkedin side"
+
+#: ../inc/admin/theme-settings.php:113
+msgid "Link to your LinkedIn page"
+msgstr "Link til din Linkedin side"
+
+#: ../inc/admin/theme-settings.php:118
+msgid "Hide Sharing"
+msgstr "Skjul deleknapper"
+
+#: ../inc/admin/theme-settings.php:119
+msgid ""
+"Hide sharing buttons on posts and pages. You can hide these and add others "
+"via plugins."
+msgstr ""
+"Skjul deleknapper på sider og indlæg, du f.eks vil indsætte andre via "
+"plugins."
+
+#: ../inc/admin/theme-settings.php:128
+msgid "Webmaster tools"
+msgstr "Webmaster tools"
+
+#: ../inc/admin/theme-settings.php:129
+msgid ""
+"Link to your Webmaster tools. See the theme help section for how to set it "
+"all up."
+msgstr ""
+"Link til Webmaster tools. Se hjælpesiden under 'Tema hjælp' for en nærmere "
+"beskrivelse."
+
+#: ../inc/admin/theme-settings.php:134
+msgid "Analytics Script"
+msgstr "Analytics Script"
+
+#: ../inc/admin/theme-settings.php:135
+msgid "Paste in your Google Analytics script"
+msgstr "Kopier dit Analytics Script ind her"
+
+#: ../inc/admin/theme-settings.php:145
+msgid "Show Cookie box"
+msgstr "Vis cookie boks"
+
+#: ../inc/admin/theme-settings.php:146
+msgid ""
+"Check to show the accept cookies box. In the EU is the needed by law if you "
+"use any kind of tracking."
+msgstr ""
+"Vælg for at vise en boks, der gør opmærksom på brugen af brugen af cookies. "
+"I EU skal denne være synlig, hvis du bruger Google Analytics eller lignende."
+
+#: ../inc/admin/theme-settings.php:151
+msgid "Text for the cookie box"
+msgstr "Teksten til cookieboksen"
+
+#: ../inc/admin/theme-settings.php:152
+msgid "Write your text for the cookie box"
+msgstr "Indsæt din tekst til cookieboksen"
+
+#: ../inc/admin/theme-settings.php:154
+msgid ""
+"We uses cookies. We uses cookies for statistics recording the use of our "
+"website. By continuing to use this website, you consent to our use of "
+"cookies. If you do not wish to enable cookies, please see our guide on how "
+"to disable cookies from the site."
+msgstr ""
+"Vi anvender cookies til at indsamle statistik om brugen af vores hjemmeside. "
+"Ved at fortsætte med at bruge denne hjemmeside giver du os tilladelse til "
+"dette. Du kan vælge at sige \"nej tak til cookies\" ved at vælge \"Afvis\" "
+"forneden."
+
+#: ../inc/admin/theme-settings.php:212
+msgid "Settings updated."
+msgstr "Indstillinger opdateret"
+
+#: ../inc/admin/theme-settings.php:475
+#, php-format
+msgid ""
+"The callback function used for the <strong>%s</strong> setting is missing."
+msgstr ""
+"The callback function used for the <strong>%s</strong> setting is missing."
+
+#: ../inc/admin/theme-settings.php:491
+msgid "Social"
+msgstr "Social"
+
+#: ../inc/admin/theme-settings.php:492
+msgid "Google"
+msgstr "Google"
+
+#: ../inc/admin/theme-settings.php:493
+msgid "Cookies"
+msgstr "Cookies"
+
+#: ../inc/breadcrump.php:20
+msgid "Home"
+msgstr "Hjem"
+
+#: ../inc/cookiebox.php:10
+msgid "We use cookies"
+msgstr "Vi bruger cookies"
+
+#: ../inc/cookiebox.php:13
+msgid "close"
+msgstr "Luk"
+
+#: ../inc/cookiebox.php:17
+msgid "Accept"
+msgstr "Acceptér"
+
+#: ../inc/cookiebox.php:18
+msgid "Decline"
+msgstr "Afvis"
+
+#: ../inc/lib/metaboxes/class-usage-demo.php:148
+msgid "Enable conditinal fields? "
+msgstr "Aktiver conditional fields? "
+
+#: ../inc/lib/metaboxes/class-usage-demo.php:149
+msgid ""
+"<small>Turn ON if you want to enable the <strong>conditinal fields</strong>."
+"</small>"
+msgstr ""
+"<small>Slå til hvis du vil bruge <strong>conditinal fields</strong>.</small>"
+
+#: ../inc/lib/metaboxes/meta-box-class/my-meta-box-class.php:420
+#: ../inc/lib/metaboxes/meta-box-class/my-meta-box-class.php:453
+msgid "Remove"
+msgstr "Fjern"
+
+#: ../inc/lib/metaboxes/meta-box-class/my-meta-box-class.php:425
+msgid "Add"
+msgstr "Tilføj"
+
+#: ../inc/lib/metaboxes/meta-box-class/my-meta-box-class.php:783
+msgid "Select a color"
+msgstr "Vælg en farve"
+
+#: ../inc/lib/metaboxes/meta-box-class/my-meta-box-class.php:871
+msgid "Select ..."
+msgstr "Vælg ..."
+
+#: ../inc/lib/metaboxes/meta-box-class/my-meta-box-class.php:1818
+#: ../inc/lib/metaboxes/meta-box-class/my-meta-box-class.php:1826
+msgid "Sorry, you cannot upload this file type for this field."
+msgstr "Beklager, du kan ikke uplaode denne type fil."
+
+#: ../inc/metaboxes/ivp-hide-subnavigation.php:7
+msgid "Hide left navigation"
+msgstr "Skjul under menu"
+
+#: ../inc/metaboxes/ivp-hide-subnavigation.php:25
+msgid "Check to hide sub navigation"
+msgstr "Klick for at skjule undermenu"
+
+#: ../inc/metaboxes/rich-tax-description-editor/i8/class.i8Core.php:422
+msgid "Settings"
+msgstr "Indstillinger"
+
+#: ../inc/widgets/ivp_social.php:15
+msgid "IværksætterPress Social links"
+msgstr "IværksætterPress Sociale links"
+
+#: ../inc/widgets/ivp_social.php:18
+msgid "Sample widget based on WPBeginner Tutorial"
+msgstr "Sample widget based on WPBeginner Tutorial"
+
+#: ../inc/widgets/ivp_social.php:35
+msgid "Meet us on facebook"
+msgstr "Mød os på Facebook"
+
+#: ../inc/widgets/ivp_social.php:38
+msgid "Meet us on twitter"
+msgstr "Mød os på Twitter"
+
+#: ../inc/widgets/ivp_social.php:41
+msgid "Meet us on youtube"
+msgstr "Mød os på YouTube"
+
+#: ../inc/widgets/ivp_social.php:44
+msgid "Meet us on pinterest"
+msgstr "Mød os på Pinterest"
+
+#: ../inc/widgets/ivp_social.php:47
+msgid "Meet us on linkedin"
+msgstr "Mød os på Linked"
+
+#: ../inc/widgets/ivp_social.php:59
+msgid "New title"
+msgstr "Ny titel"
+
+#: ../inc/widgets/ivp_social.php:64
+msgid "Title:"
+msgstr "Titel:"
+
+#: ../index.php:7
+msgid "Blog"
+msgstr "Blog"
+
+#: ../page-login.php:13
+msgid "Log in"
+msgstr "Log ind"
+
+#: ../page-login.php:36
+msgid "Uername"
+msgstr "Brugernavn"
+
+#: ../page-login.php:37
+msgid "Password"
+msgstr "Password"
+
+#: ../search.php:5
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Søgeresultater for %s"
+
+#: ../tag.php:5
+#, php-format
+msgid "Tag Archives: %s"
+msgstr "Tag arkiv: %s"
+
+#~ msgid ""
+#~ "This entry was posted in %1$s and tagged %2$s. Bookmark the <a href=\"%3$s"
+#~ "\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+#~ msgstr ""
+#~ "Dette indlæg er i  %1$s og tagget %2$s. Bookmark <a href=\"%3$s\" title="
+#~ "\"Permalink til %4$s\" rel=\"bookmark\">permalinket</a>."
+
+#~ msgid ""
+#~ "This entry was posted in %1$s. Bookmark the <a href=\"%3$s\" title="
+#~ "\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+#~ msgstr ""
+#~ "Dette indlæg  er i %1$s. Bookmark <a href=\"%3$s\" title=\"Permalink to "
+#~ "%4$s\" rel=\"bookmark\">permalinket</a>."
+
+#~ msgid ""
+#~ "Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark"
+#~ "\">permalink</a>."
+#~ msgstr ""
+#~ "Bookmark <a href=\"%3$s\" title=\"Permalink til %4$s\" rel=\"bookmark"
+#~ "\">permalinket</a>."
+
+#~ msgid "Top primary menu"
+#~ msgstr "Hovedmenu"
+
+#~ msgid "Pages:"
+#~ msgstr "Sider:"
