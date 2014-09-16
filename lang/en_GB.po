@@ -1,0 +1,181 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: IVP\n"
+"POT-Creation-Date: 2014-04-25 20:04+0100\n"
+"PO-Revision-Date: 2014-04-25 20:05+0100\n"
+"Last-Translator: \n"
+"Language-Team: ivp <info@ivaerksaetterpress.dk>\n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.4\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../functions.php:57
+#, php-format
+msgid "Search results for %s"
+msgstr ""
+
+#: ../functions.php:60 ../functions.php:77
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: ../functions.php:127
+#, php-format
+msgid "%s"
+msgstr ""
+
+#: ../functions.php:131
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: ../functions.php:143
+#, php-format
+msgid "%1$s %2$s"
+msgstr ""
+
+#: ../functions.php:156
+msgid "Pingback:"
+msgstr ""
+
+#: ../functions.php:156
+msgid "(Edit)"
+msgstr ""
+
+#: ../functions.php:176
+msgid "Primary Widget Area"
+msgstr ""
+
+#: ../functions.php:178
+msgid "Blog post sidebar widget"
+msgstr ""
+
+#: ../functions.php:187
+msgid "First Footer Widget Area"
+msgstr ""
+
+#: ../functions.php:189
+msgid "The first footer widget area"
+msgstr ""
+
+#: ../functions.php:198
+msgid "Second Footer Widget Area"
+msgstr ""
+
+#: ../functions.php:200
+msgid "The second footer widget area"
+msgstr ""
+
+#: ../functions.php:209
+msgid "Third Footer Widget Area"
+msgstr ""
+
+#: ../functions.php:211
+msgid "The third footer widget area"
+msgstr ""
+
+#: ../functions.php:220
+msgid "Fourth Footer Widget Area"
+msgstr ""
+
+#: ../functions.php:222
+msgid "The fourth footer widget area"
+msgstr ""
+
+#: ../functions.php:231
+msgid "Campaign page"
+msgstr ""
+
+#: ../functions.php:233
+msgid "Campaign page widget area"
+msgstr ""
+
+#: ../functions.php:272
+#, php-format
+msgid ""
+"<span class=\"%1$s\">Posted on</span> <span class=\"entry-date\">%2$s %3$s, "
+"%4$s</span> <span class=\"meta-sep\">by</span> %5$s"
+msgstr ""
+
+#: ../functions.php:313
+#, php-format
+msgid ""
+"This entry was posted in %1$s and tagged %2$s. Bookmark the <a href=\"%3$s\" "
+"title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+msgstr ""
+
+#: ../functions.php:315
+#, php-format
+msgid ""
+"This entry was posted in %1$s. Bookmark the <a href=\"%3$s\" title="
+"\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+msgstr ""
+
+#: ../functions.php:317
+#, php-format
+msgid ""
+"Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark"
+"\">permalink</a>."
+msgstr ""
+
+#: ../inc/admin/admin-pages.php:15 ../inc/admin/admin-pages.php:16
+msgid "Theme settings"
+msgstr ""
+
+#: ../index.php:8
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr ""
+
+#: ../index.php:9
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: ../index.php:16
+msgid "Not Found"
+msgstr ""
+
+#: ../index.php:18
+msgid ""
+"Apologies, but no results were found for the requested archive. Perhaps "
+"searching will help find a related post."
+msgstr ""
+
+#: ../index.php:41
+#, php-format
+msgid "Posted in %2$s"
+msgstr ""
+
+#: ../index.php:48
+#, php-format
+msgid "Tagged %2$s"
+msgstr ""
+
+#: ../index.php:51
+msgid "Leave a comment"
+msgstr ""
+
+#: ../index.php:51
+msgid "1 Comment"
+msgstr ""
+
+#: ../index.php:51
+msgid "% Comments"
+msgstr ""
+
+#: ../index.php:62
+msgid "&larr; Older posts"
+msgstr ""
+
+#: ../index.php:63
+msgid "Newer posts &rarr;"
+msgstr ""
+
+#: ../single.php:16
+msgid "Pages:"
+msgstr ""

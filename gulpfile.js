@@ -9,7 +9,6 @@ var gulp        = require('gulp'),
     prefix      = require('gulp-autoprefixer'),
     del         = require('del'),
     server      = require('./server'),
-    kss         = require('gulp-kss'),
     browserSync = require('browser-sync');
 
 
@@ -109,17 +108,9 @@ gulp.task('public', function() {
   });
 });
 
-gulp.task('kss', function() {
-  return gulp.src([SOURCE + STYLES + '**/*.scss'])
-    .pipe(kss({
-      overview: 'README.md',
-      templateDirectory: SOURCE + 'styleguide-template/'
-    }))
-    .pipe(gulp.dest(BUILD + 'styleguide/'));
-});
 
 // --- Bringing it all together in a build task ---
-gulp.task('build', ['js', 'css', 'jade', 'images', 'fonts', 'vendor', 'public', 'kss']);
+gulp.task('build', ['js', 'css', 'jade', 'images', 'fonts', 'vendor', 'public']);
 
 
 // --- Setting up browser sync - see https://github.com/shakyShane/browser-sync ---
@@ -142,15 +133,13 @@ gulp.task('browser-sync', ['clean'], function() {
 
 // --- Let gulp keep an eye on our files and compile stuff if it changes ---
 gulp.task('watch', ['browser-sync'], function () {
-  gulp.watch(SOURCE + STYLES + '**/*.scss',['css', 'kss']);
+  gulp.watch(SOURCE + STYLES + '**/*.scss',['css']);
 
   gulp.watch(SOURCE + '**/*.jade',['jade']);
 
   gulp.watch(SOURCE + JS + '**/*.js',['js']);
 
   gulp.watch(SOURCE + IMAGES + '*.*',['images']);
-
-  gulp.watch([SOURCE + 'styleguide-template/**/*.*', 'README.md'],['kss']);
 });
 
 
@@ -159,13 +148,3 @@ gulp.task('default', ['clean'], function(){
   gulp.start('watch');
 });
 
-
-// --- Heroku Task. Is only run when deployed to heroku.
-gulp.task('heroku', ['clean'], function() {
-  gulp.start('build');
-  var port = process.env.PORT || 3000;
-   
-  server.listen(port, function() {
-    console.log("Listening on " + port);
-  });
-});
