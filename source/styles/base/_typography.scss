@@ -3,7 +3,7 @@
 // Styleguide 3.
 
 // Font Families
-$font-family-base:   'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family-base:   "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 // Font Sizes
 $font-size-base:     14px;
@@ -114,3 +114,8 @@ h6, .zeta {
 p {
   @extend %limit-width;
 }
+
+.page-title{}
+.page-manchet{}
+
+

@@ -1,18 +1,54 @@
 <?php
 
 /*
- * Global options
+ * Constants
  */
+
+define( 'THEMEROOT', get_stylesheet_directory_uri() );
+define ('IMAGES' , THEMEROOT . '/img' );
+
+
+if( !isset( $content_width ) ){
+	$content_width = 1280;
+}
 
 
 /*
- * Setting up localization
+ * Boilerplate setup function
  */
 
-add_action('after_setup_theme', 'ivp_theme_setup');
-function ivp_theme_setup(){
-    load_theme_textdomain('ivp', get_template_directory() . '/lang');
+if( !function_exists( 'ivp_boilerplate_setup ') ){
+	function ivp_boilerplate_setup(){
+		/*
+		 * Setting up localization
+		 */
+		load_theme_textdomain('ivp', get_template_directory() . '/lang');
+
+		/*
+		 * Enable support for Post Formats.
+		 * See http://codex.wordpress.org/Post_Formats
+		 */
+		add_theme_support( 'post-formats', array(
+			'aside', 'image', 'video', 'audio', 'quote', 'link', 'gallery',
+		) );
+
+		// add thumbnail support
+		add_theme_support( 'post-thumbnails' );
+
+		
+		// Menus
+		// This theme uses wp_nav_menu() in two locations.
+		register_nav_menus( array(
+			'primary'   => __( 'Site navigation', 'ivp' ),
+			'secondary' => __( 'Secondary menu for widgets', 'ivp' ),
+		) );
+
+
+	}
+
+	add_action( 'after_setup_theme', 'ivp_boilerplate_setup');
 }
+
 
 /*
  * Include our scripts 
@@ -49,11 +85,10 @@ include('inc/admin/admin-pages.php');
 include('inc/admin/theme-customization.php');
 include('inc/admin/theme-update-checker.php');
 
-include('inc/breadcrump.php');
-include('inc/cookiebox.php');
-include('inc/share-buttons.php');
 include('inc/shortcodes.php');
+
 // Our widgets
+include('inc/widgetareas.php');
 include('inc/widgets/ivp_social.php');
 
 // Our metaboxes
@@ -70,6 +105,22 @@ $ivp_theme_update_checker = new ThemeUpdateChecker(
     'amsterdam',
     'http://ivaerksaetterpress.dk/themes/amsterdam/info.json'
 );
+
+if ( ! function_exists( 'boilerplate_remove_recent_comments_style' ) ) :
+	/**
+	 * Removes the default styles that are packaged with the Recent Comments widget.
+	 *
+	 * To override this in a child theme, remove the filter and optionally add your own
+	 * function tied to the widgets_init action hook.
+	 *
+	 * @since Twenty Ten 1.0
+	 */
+	function boilerplate_remove_recent_comments_style() {
+		global $wp_widget_factory;
+		remove_action( 'wp_head', array( $wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style' ) );
+	}
+endif;
+add_action( 'widgets_init', 'boilerplate_remove_recent_comments_style' );
 
 
 if ( ! function_exists( 'boilerplate_comment' ) ) :
@@ -197,92 +248,6 @@ if ( ! function_exists( 'boilerplate_filter_wp_title' ) ) :
 endif;
 add_filter( 'wp_title', 'boilerplate_filter_wp_title', 10, 2 );
 
-if ( ! function_exists( 'boilerplate_widgets_init' ) ) :
-	/**
-	 * Register widgetized areas, including two sidebars and four widget-ready columns in the footer.
-	 *
-	 * To override boilerplate_widgets_init() in a child theme, remove the action hook and add your own
-	 * function tied to the init hook.
-	 *
-	 * @since Twenty Ten 1.0
-	 * @uses register_sidebar
-	 */
-	function boilerplate_widgets_init() {
-		// Area 2, located in the footer. Empty by default.
-		register_sidebar( array(
-			'name' => __( 'Primary Widget Area', 'ivp' ),
-			'id' => 'primary-widget-area',
-			'description' => __( 'Blog post sidebar widget', 'ivp' ),
-			'before_widget' => '<div id="%1$s" class="ivp-widget-container %2$s">',
-			'after_widget' => '</div>',
-			'before_title' => '<h3 class="ivp-widget-title">',
-			'after_title' => '</h3>',
-		) );
-
-		// Area 3, located in the footer. Empty by default.
-		register_sidebar( array(
-			'name' => __( 'First Footer Widget Area', 'ivp' ),
-			'id' => 'first-footer-widget-area',
-			'description' => __( 'The first footer widget area', 'ivp' ),
-			'before_widget' => '<div id="%1$s" class="ivp-widget-container %2$s">',
-			'after_widget' => '</div>',
-			'before_title' => '<h3 class="ivp-widget-title">',
-			'after_title' => '</h3>',
-		) );
-
-		// Area 4, located in the footer. Empty by default.
-		register_sidebar( array(
-			'name' => __( 'Second Footer Widget Area', 'ivp' ),
-			'id' => 'second-footer-widget-area',
-			'description' => __( 'The second footer widget area', 'ivp' ),
-			'before_widget' => '<div id="%1$s" class="ivp-widget-container %2$s">',
-			'after_widget' => '</div>',
-			'before_title' => '<h3 class="ivp-widget-title">',
-			'after_title' => '</h3>',
-		) );
-
-		// Area 5, located in the footer. Empty by default.
-		register_sidebar( array(
-			'name' => __( 'Third Footer Widget Area', 'ivp' ),
-			'id' => 'third-footer-widget-area',
-			'description' => __( 'The third footer widget area', 'ivp' ),
-			'before_widget' => '<div id="%1$s" class="ivp-widget-container %2$s">',
-			'after_widget' => '</div>',
-			'before_title' => '<h3 class="ivp-widget-title">',
-			'after_title' => '</h3>',
-		) );
-
-		// Area 6, located in the footer. Empty by default.
-		register_sidebar( array(
-			'name' => __( 'Fourth Footer Widget Area', 'ivp' ),
-			'id' => 'fourth-footer-widget-area',
-			'description' => __( 'The fourth footer widget area', 'ivp' ),
-			'before_widget' => '<div id="%1$s" class="ivp-widget-container %2$s">',
-			'after_widget' => '</div>',
-			'before_title' => '<h3 class="ivp-widget-title">',
-			'after_title' => '</h3>',
-		) );
-
-	}
-endif;
-add_action( 'widgets_init', 'boilerplate_widgets_init' );
-
-if ( ! function_exists( 'boilerplate_remove_recent_comments_style' ) ) :
-	/**
-	 * Removes the default styles that are packaged with the Recent Comments widget.
-	 *
-	 * To override this in a child theme, remove the filter and optionally add your own
-	 * function tied to the widgets_init action hook.
-	 *
-	 * @since Twenty Ten 1.0
-	 */
-	function boilerplate_remove_recent_comments_style() {
-		global $wp_widget_factory;
-		remove_action( 'wp_head', array( $wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style' ) );
-	}
-endif;
-add_action( 'widgets_init', 'boilerplate_remove_recent_comments_style' );
-
 if ( ! function_exists( 'boilerplate_posted_on' ) ) :
 	/**
 	 * Prints HTML with meta information for the current post—date/time and author.
@@ -365,10 +330,6 @@ endif;
 	endif;
 	add_filter('the_generator', 'boilerplate_complete_version_removal');
 
-	// add thumbnail support
-	if ( function_exists( 'add_theme_support' ) ) :
-		add_theme_support( 'post-thumbnails' );
-	endif;
 
 
 /*	End Boilerplate */
@@ -391,13 +352,6 @@ add_filter( 'wp_page_menu_args', 'ivp_boilerplate_page_menu_args' );
 
 
 
-// Menus
-// This theme uses wp_nav_menu() in two locations.
-register_nav_menus( array(
-	'primary'   => __( 'Site navigation', 'ivp' ),
-	'secondary' => __( 'Secondary menu for widgets', 'ivp' ),
-) );
-
 
 /*
  * Switch default core markup for search form, comment form, and comments
@@ -407,156 +361,9 @@ add_theme_support( 'html5', array(
 	'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'
 ) );
 
-/*
- * Enable support for Post Formats.
- * See http://codex.wordpress.org/Post_Formats
- */
-add_theme_support( 'post-formats', array(
-	'aside', 'image', 'video', 'audio', 'quote', 'link', 'gallery',
-) );
 
 // This theme uses its own gallery styles.
 add_filter( 'use_default_gallery_style', '__return_false' );
-
-
-
-add_action('admin_init', 'add_meta_boxes', 1);
-function add_meta_boxes() {
-	add_meta_box( 'repeatable-fields', 'Audio Playlist', 'repeatable_meta_box_display', 'post', 'normal', 'high');
-}
-
-function repeatable_meta_box_display() {
-	global $post;
-
-	$repeatable_fields = get_post_meta($post->ID, 'repeatable_fields', true);
-
-
-	wp_nonce_field( 'repeatable_meta_box_nonce', 'repeatable_meta_box_nonce' );
-?>
-	<script type="text/javascript">
-jQuery(document).ready(function($) {
-	$('.metabox_submit').click(function(e) {
-		e.preventDefault();
-		$('#publish').click();
-	});
-	$('#add-row').on('click', function() {
-		var row = $('.empty-row.screen-reader-text').clone(true);
-		row.removeClass('empty-row screen-reader-text');
-		row.insertBefore('#repeatable-fieldset-one tbody>tr:last');
-		return false;
-	});
-	$('.remove-row').on('click', function() {
-		$(this).parents('tr').remove();
-		return false;
-	});
-
-	$('#repeatable-fieldset-one tbody').sortable({
-		opacity: 0.6,
-		revert: true,
-		cursor: 'move',
-		handle: '.sort'
-	});
-});
-	</script>
-
-	<table id="repeatable-fieldset-one" width="100%">
-	<thead>
-		<tr>
-			<th width="2%"></th>
-			<th width="30%">Name</th>
-			<th width="60%">URL</th>
-			<th width="2%"></th>
-		</tr>
-	</thead>
-	<tbody>
-	<?php
-
-	if ( $repeatable_fields ) :
-
-		foreach ( $repeatable_fields as $field ) {
-?>
-	<tr>
-		<td><a class="button remove-row" href="#">-</a></td>
-		<td><input type="text" class="widefat" name="name[]" value="<?php if($field['name'] != '') echo esc_attr( $field['name'] ); ?>" /></td>
-
-		<td><input type="text" class="widefat" name="url[]" value="<?php if ($field['url'] != '') echo esc_attr( $field['url'] ); else echo 'http://'; ?>" /></td>
-		<td><a class="sort">|||</a></td>
-		
-	</tr>
-	<?php
-		}
-	else :
-		// show a blank one
-?>
-	<tr>
-		<td><a class="button remove-row" href="#">-</a></td>
-		<td><input type="text" class="widefat" name="name[]" /></td>
-
-
-		<td><input type="text" class="widefat" name="url[]" value="http://" /></td>
-<td><a class="sort">|||</a></td>
-		
-	</tr>
-	<?php endif; ?>
-
-	<!-- empty hidden one for jQuery -->
-	<tr class="empty-row screen-reader-text">
-		<td><a class="button remove-row" href="#">-</a></td>
-		<td><input type="text" class="widefat" name="name[]" /></td>
-
-
-		<td><input type="text" class="widefat" name="url[]" value="http://" /></td>
-<td><a class="sort">|||</a></td>
-		
-	</tr>
-	</tbody>
-	</table>
-
-	<p><a id="add-row" class="button" href="#">Add another</a>
-	<input type="submit" class="metabox_submit" value="Save" />
-	</p>
-	
-	<?php
-}
-
-add_action('save_post', 'repeatable_meta_box_save');
-function repeatable_meta_box_save($post_id) {
-	if ( ! isset( $_POST['repeatable_meta_box_nonce'] ) ||
-		! wp_verify_nonce( $_POST['repeatable_meta_box_nonce'], 'repeatable_meta_box_nonce' ) )
-		return;
-
-	if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE)
-		return;
-
-	if (!current_user_can('edit_post', $post_id))
-		return;
-
-	$old = get_post_meta($post_id, 'repeatable_fields', true);
-	$new = array();
-
-
-	$names = $_POST['name'];
-	$urls = $_POST['url'];
-
-	$count = count( $names );
-
-	for ( $i = 0; $i < $count; $i++ ) {
-		if ( $names[$i] != '' ) :
-			$new[$i]['name'] = stripslashes( strip_tags( $names[$i] ) );
-
-
-		if ( $urls[$i] == 'http://' )
-			$new[$i]['url'] = '';
-		else
-			$new[$i]['url'] = stripslashes( $urls[$i] ); // and however you want to sanitize
-		endif;
-	}
-
-	if ( !empty( $new ) && $new != $old )
-		update_post_meta( $post_id, 'repeatable_fields', $new );
-	elseif ( empty($new) && $old )
-		delete_post_meta( $post_id, 'repeatable_fields', $old );
-}
 
 
 /*
@@ -593,35 +400,4 @@ function ivp_customizer_css() {
 }
 add_action( 'wp_head', 'ivp_customizer_css' );
 
-
-
-/* ------------------------------------------------------------------*/
-/* ADD ACCEPT TERMS TO MEMBERSHIPS */
-/* ------------------------------------------------------------------*/
-function ivp_rcp_terms_of_use_field() {
-	ob_start(); ?>
-		<p>
-			<label for="rcp_terms_agreement"><input name="rcp_terms_agreement" id="rcp_terms_agreement" class="require" type="checkbox"/> <?php  _e('Agree to Our Terms of Use','ivp');?></label>
-		</p>
-	<?php
-	echo ob_get_clean();
-}
-add_action('rcp_after_register_form_fields', 'ivp_rcp_terms_of_use_field');
-
-function ivp_rcp_check_for_agreement( $posted ) {
-	if( ! isset( $posted['rcp_terms_agreement'] ) ) {
-		rcp_errors()->add('agree_to_terms', __('You must agree to our terms of use', 'ivp'), 'register' );
-	}
-}
-add_action('rcp_form_errors', 'ivp_rcp_check_for_agreement');
-
-
-
-if ( (isset($_GET['action']) && $_GET['action'] != 'logout') || (isset($_POST['login_location']) && !empty($_POST['login_location'])) ) {
-	add_filter('login_redirect', 'ivp_login_redirect', 10, 3);
-	function ivp_login_redirect() {
-		$location = $_SERVER['HTTP_REFERER'];
-		wp_safe_redirect($location);
-		exit();
-	}
-}
+add_action( 'widgets_init', 'boilerplate_remove_recent_comments_style' );

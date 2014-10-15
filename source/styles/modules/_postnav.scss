@@ -1,0 +1,30 @@
+#nav-above,
+#nav-below{
+    border-top: 3px solid #ddd;
+    display: table;
+    margin: 1em 0;
+    padding: 1em 0;
+    width: 100%;
+}
+
+#nav-above{
+    border-top: none;
+    border-bottom: 3px solid #ddd;
+}
+
+#nav-above a,
+#nav-below a{
+    text-decoration: none;
+}
+
+.nav-next,
+.nav-previous{
+    display: inline-block;
+}
+
+.nav-next{
+    float: right;
+}
+.nav-previous{
+    float: left;
+}
