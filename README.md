@@ -1,3 +1,10 @@
 wp-boilerplate
 ==============
-Todo
+Boilerplate for WordPress themes
+
+Uses of sass
+
+CSS Includes:
+- Normalize
+- grid system
+
