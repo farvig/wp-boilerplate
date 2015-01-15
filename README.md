@@ -10,21 +10,21 @@ CSS Includes:
 
 
 
-*Theme settings
+# Theme settings
 -Social link: Facebook, Twitter, Pinterest, LinkedIn, YouTube
 -Cookie box: Show/hide and content
 Google Webmaster tools meta tag link
 -Google Analytics script
 -Hide share buttons
 
-*Theme Customizer
+# Theme Customizer
 -Logo
 
-*Partials
+# Partials
 - Breadcrumb
 - Sub navigation based on child pages
 - Social share buttons: Facebook, Twitter, Google+ and Pinterest based on links to reduce needed scrips
 - Cookiebox. Have your visitors accept cookies before setting Google Analytics script
 
-*Widgets
+# Widgets
 - Social link
