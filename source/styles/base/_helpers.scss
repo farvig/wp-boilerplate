@@ -1,11 +1,3 @@
-
-// Helpers
-//
-// Various helper classes used throughout the site
-//
-// Styleguide 2.
-
-
 // Positioning
 //
 // The `dummy` class is only for presentation purposes and should be ignored.
@@ -18,8 +10,6 @@
 // .right         - Floats the element right.
 // .flex-center   - Center aligns items inside of it with flex
 //
-// Styleguide 2.1
-
 .center {
   display: block;
   margin-left: auto;
@@ -54,7 +44,6 @@
 // .landmark    - Usefull for hero elements. Gives element a double bototm margin.
 // .row         - Turns element into a block element and gives it a bottom margin.
 //
-// Styleguide 2.2
 
 .flush {
   margin-bottom: 0 !important;
@@ -91,7 +80,6 @@
 // .normal            - Makes text normal weight
 // .light             - Makes text light weight
 //
-// Styleguide 2.3
 
 @each $pos in right, center, left {
   .align-#{$pos} {
@@ -136,7 +124,6 @@
 // .rectangle       - Makes the element behave a like a rectangle image and retains its dimensions
 // .cursor          - Change curser to pointer
 //
-// Styleguide 2.4
 
 .divider {
   border: 0;
@@ -169,7 +156,6 @@
 //   <iframe src="http://www.youtube.com/embed/J8wKORctsus"></iframe>
 // </div>
 //
-// Styleguide 2.5
 
 .embed-container { 
   height: 0;
@@ -213,4 +199,53 @@
   &.rectangle {
     width: auto;
   }
+}
+
+
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
 }

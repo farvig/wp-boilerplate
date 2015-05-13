@@ -7,12 +7,11 @@
  */
 
 
-function simple_breadcrumb() {
-    global $post;
+    
     // Change the separator to what ever you need e.g. / or >
-	$separator = " <span class='breadcrump-divider'>»</span> "; 
-	
-    echo '<div class="breadcrumb">';
+	$separator = " <span class='breadcrumb-divider'>»</span> "; 
+    
+    echo '<div class="breadcrumb container">';
 	if (!is_front_page()) {
 		echo '<a href="';
 		echo home_url();
@@ -26,7 +25,7 @@ function simple_breadcrumb() {
 				the_title();
 			}
 		} elseif ( is_page() && $post->post_parent ) {
-			$home = get_page(get_option('page_on_front'));
+			$home = get_page( get_option('page_on_front') );
 			for ($i = count($post->ancestors)-1; $i >= 0; $i--) {
 				if (($home->ID) != ($post->ancestors[$i])) {
 					echo '<a href="';
@@ -46,4 +45,3 @@ function simple_breadcrumb() {
 		bloginfo('name');
 	}
 	echo '</div>';
-}

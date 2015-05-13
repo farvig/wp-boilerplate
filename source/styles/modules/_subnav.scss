@@ -1,0 +1,47 @@
+
+.toggle-mobile-nav{
+    display: none;
+}
+
+/* Level 1 */
+.sub-nav ul {
+    padding:0;
+    margin: 0;
+    list-style: none;
+}
+.sub-nav li {
+    border-top:2px solid #ddd;
+    position: relative;
+}
+
+.sub-nav > ul > li:last-child{
+    border-bottom:2px solid #ddd;
+}
+
+.sub-nav a{
+    display: block;
+    padding: 5px 0;
+    text-decoration: none;
+}
+
+.sub-nav .children{
+    display: none;
+}
+.sub-nav .current_page_item .children,
+.current_page_ancestor .children{
+    display: block;
+}
+
+.sub-nav .current_page_item > a{
+    color:#4E4E4E;
+}
+
+/* Level 2 */
+.sub-nav ul.children{
+    list-style: none;
+}
+.sub-nav .children li {
+    font-weight: normal;
+    padding-left: 2em;
+}
+

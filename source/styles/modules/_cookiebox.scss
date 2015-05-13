@@ -1,0 +1,63 @@
+.cookie-container{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 1000;
+}
+.cookie-container a{
+    text-decoration: none;
+}
+.toggle-cookie-text{
+    background: transparent url('img/toggle-cookiebox-icon.png') center center no-repeat;
+    display: block;
+    height: 55px;
+    position: absolute;
+    bottom: 0; left:0;
+    width: 55px;
+    z-index: 5;
+}
+.cookie-text-container{
+    display: none;
+    position: relative;
+    left:50px;
+    top:-50px;
+    width: 230px;
+}
+.cookie-text-inner-container{
+    background-color: #fff;
+    padding: $spacing;
+}
+
+.cookie-text-inner-container h1,
+.cookie-text-inner-container h2,
+.cookie-text-inner-container h3,
+.cookie-text-inner-container h4,
+.cookie-text-inner-container h5,
+.cookie-text-inner-container h6{}
+
+a.cookie-close-btn{
+    color:#333;
+    font-weight: bold;
+    position: absolute;
+    top:$spacing/2;
+    right:$spacing/2;
+}
+
+.cookie-box-footer{
+    @extend %clearfix
+}
+
+.decline-cookies{
+    background-color: red;
+    float: left;
+}
+
+.accept-cookies{
+    background-color:green;
+    float: right;
+}
+
+.accept-cookies:hover,
+.decline-cookies:hover{
+    color: #fff;
+}

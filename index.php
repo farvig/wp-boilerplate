@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<section>
+<section class="container">
 	<header class="page-header">
 		<div class="centered">
 		    <h1 class="page-title">
@@ -8,8 +8,8 @@
 		    </h1>
 		</div>
 	</header> 
-    <div class="centered clearfix">
-        <section class="content module-2-3">
+    <div class="grid-group">
+        <section class="grid size-8 size-8--lap size-12--palm">
 
 		<?php /* If there are no posts to display, such as an empty archive page */ ?>
 		<?php if ( ! have_posts() ) : ?>
@@ -64,7 +64,7 @@
 			</nav><!-- #nav-below -->
 		<?php endif; ?>
 		</section>
-		<aside class="module-1-3">
+		<aside class="grid size-4 size-4--lap size-12--palm">
 	        <?php get_sidebar(); ?>
 	    </aside>
 	</div>

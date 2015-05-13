@@ -1,0 +1,20 @@
+#nav-above,
+#nav-below{
+    padding: 1em 0;
+    width: 100%;
+}
+
+#nav-above{}
+
+#nav-above a,
+#nav-below a{}
+
+.nav-next,
+.nav-previous{}
+
+.nav-next{
+    float: right;
+}
+.nav-previous{
+    float: left;
+}

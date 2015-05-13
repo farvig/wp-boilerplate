@@ -1,7 +1,4 @@
 <?php
-
-function ivp_display_cookiebox(){
-	// Get out themes option
 	global $ivp_theme_options;
 
 	if($ivp_theme_options['show_cookiebox']){
@@ -29,4 +26,3 @@ function ivp_display_cookiebox(){
 			}
 		}
 	}
-}

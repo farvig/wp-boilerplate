@@ -1,0 +1,13 @@
+body#tinymce.wp-editor {}
+body#tinymce.wp-editor p {}
+body#tinymce.wp-editor a {}
+body#tinymce.wp-editor ul {}
+body#tinymce.wp-editor li {}
+
+body#tinymce.wp-editor blockquote {}
+
+body#tinymce.wp-editor code,
+body#tinymce.wp-editor pre {
+  font-family: monospace;
+  font-size: 1em; 
+}

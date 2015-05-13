@@ -1,0 +1,53 @@
+form{}
+fieldset{}
+legend{}
+
+label{}
+
+input,
+select,
+textarea{
+	border:1px solid #ccc;
+	border-radius:0;
+	display: block;
+	font-size:1em;
+	padding:1em;
+	appearance: none;
+	-webkit-appearance:none;
+	-moz-appearance: none;
+}
+
+textarea {
+	min-height: 200px;
+    resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+	border:1px solid $color-primary;
+	outline:none;
+}
+
+input[type="submit"]{
+	clear: both;
+	display: block;
+}
+input[type="submit"]:hover{}
+
+select{
+	vertical-align:top;
+}
+
+
+// Inline input fields
+.inline-element{
+	display: inline-block !important;
+	line-height:1.4em;
+	margin: 0;
+	padding:$spacing/2 $spacing;
+	&.btn{
+		padding-left: 2em;
+		padding-right: 2em;
+	}
+}

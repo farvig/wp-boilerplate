@@ -1,0 +1,46 @@
+.post-comments-wrapper ol{
+    padding: 0;
+}
+
+.post-comments-wrapper > ol > li{
+    margin-bottom: 1em;
+    padding: 0;
+}
+
+.comment{
+    list-style: none;
+}
+
+.comment-content.module-3-4{
+    margin-right: 0;
+}
+.post-comments-wrapper .children{}
+.comment-author-image{
+    padding: 0;
+}
+
+.comment-author-image img{}
+
+[class*="module"].comment-content{
+    padding-top: 0;
+}
+
+.comment-author-name{}
+
+.comment-date{}
+
+.post-comment-reply{}
+
+#respond label,
+#respond input[tpye="text"],
+#respond input[tpye="email"],
+#respond input[tpye="url"],
+#respond textarea{}
+
+#respond label span.required{
+    color: #DE2828;
+}
+
+.comment-notes{}
+
+.form-allowed-tags{}
