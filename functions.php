@@ -7,10 +7,10 @@
 define( 'THEMEROOT', get_stylesheet_directory_uri() );
 define ('IMAGES' , THEMEROOT . '/img' );
 
+
 if( !isset( $content_width ) ){
 	$content_width = 1280;
 }
-
 /*
  * Boilerplate setup function
  */
@@ -420,3 +420,5 @@ function ivp_login_stylesheet() {
     //wp_enqueue_script( 'custom-login', get_stylesheet_directory_uri() . '/style-login.js' );
 }
 add_action( 'login_enqueue_scripts', 'ivp_login_stylesheet' );
+
+add_action( 'widgets_init', 'boilerplate_remove_recent_comments_style' );

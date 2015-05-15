@@ -3,6 +3,7 @@
 }
 
 .post-comments-wrapper > ol > li{
+    border-bottom: 2px solid #ddd;
     margin-bottom: 1em;
     padding: 0;
 }
@@ -15,27 +16,49 @@
     margin-right: 0;
 }
 .post-comments-wrapper .children{}
+
+
+.post-comments-wrapper .children{
+    border-left:4px solid #ddd;
+}
 .comment-author-image{
     padding: 0;
 }
 
 .comment-author-image img{}
-
-[class*="module"].comment-content{
-    padding-top: 0;
+.comment-author-image img{
+    border:2px solid #4e4e4e;
 }
-
 .comment-author-name{}
 
 .comment-date{}
 
 .post-comment-reply{}
+.comment-author-name{
+    font-size: 1.3em;
+    margin-bottom: 0px;
+    margin-top: 0;
+}
+
+.comment-date{
+    font-size: .825em;
+}
+
+
+.post-comment-reply{
+    clear: both;
+    text-align: right;
+}
 
 #respond label,
 #respond input[tpye="text"],
 #respond input[tpye="email"],
 #respond input[tpye="url"],
 #respond textarea{}
+#respond textarea{
+    display: block;
+    width: 100%;
+}
 
 #respond label span.required{
     color: #DE2828;
@@ -44,3 +67,10 @@
 .comment-notes{}
 
 .form-allowed-tags{}
+.comment-notes{
+    font-size: .8em;
+}
+
+.form-allowed-tags{
+    display: none;
+}
